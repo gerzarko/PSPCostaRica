@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import { createSignal, createEffect } from "solid-js";
 import { SignalComponent } from "../components/SignalComponent";
-import { HomeComponent } from "../components/HomeComponent";
+import { LoginComponent } from "../components/LoginComponent";
 
 const [hola, setHola] = createSignal(2);
 
@@ -19,5 +19,5 @@ setHola(4);
 ---
 
 <Layout title="Welcome to Astro.">
-  <HomeComponent client:load />
+  <LoginComponent client:load />
 </Layout>
