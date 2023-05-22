@@ -3,8 +3,15 @@ import { SignalComponent } from "./SignalComponent";
 import supabase from "../config/supabaseClient";
 import { Routes, useNavigate, Route } from "@solidjs/router";
 import { LoginComponent } from "./LoginComponent";
+import { useStore } from "@nanostores/solid";
+import { agregarPersisten, consolePersisten } from "./context/cartStore";
+// import { addItem, cartItems } from "../context/cartStore";
 
 export const HomeComponent = () => {
+  // const $cartItems = useStore(cartItems);
+
+  // addItem();
+
   return (
     <div>
       <h1>chau</h1>
@@ -13,7 +20,7 @@ export const HomeComponent = () => {
 
       <SignalComponent />
       <a href="/addService">service</a>
-      <button></button>
+      <button onclick={agregarPersisten}>addicionar</button>
     </div>
   );
 };

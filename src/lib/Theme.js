@@ -26,5 +26,6 @@ export const Theme = () => {
     themeSwitch();
   });
 
+  console.log(1);
   ThemeCheck();
 };

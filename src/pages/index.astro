@@ -1,23 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Card from "../components/astroComponents/Card.astro";
 import { createSignal, createEffect } from "solid-js";
 import { SignalComponent } from "../components/SignalComponent";
 import { HomeComponent } from "../components/HomeComponent";
-
-const [hola, setHola] = createSignal(2);
-
-createEffect(() => {
-  alert(hola());
-  setHola(hola() + 1);
-});
-
-setHola(4);
-{
-  console.log(hola);
-}
+import { AppComponent } from "../components/AppComponent";
 ---
 
 <Layout title="Welcome to Astro.">
-  <HomeComponent client:load />
+  <AppComponent client:load />
 </Layout>
